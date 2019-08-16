@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import './css/pure-min.css';
+import Menu from './Menu';
+import Header from './Header';
+import MenuMobile from './MenuMobile';
+import { AutorBox } from './Autor';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+    render(){
+        return (
+            
+            <div id="layout">
+
+                <MenuMobile />
+                <Menu />
+
+                <div id="main">
+                    <Header />
+
+                    <div className="content">
+                        
+                       <AutorBox></AutorBox>
+
+                    </div>
+                </div>
+            </div>
+
+        );
+    }
 }
 
 export default App;
